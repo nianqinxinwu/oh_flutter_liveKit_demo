@@ -1,0 +1,149 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build ios --simulator --no-codesign
+
+## exception
+
+ProcessException: ProcessException: Process exited abnormally with exit code 70:
+2026-04-21 09:58:37.270 xcodebuild[31917:457017] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorFoundation (/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, 0x0109): Symbol not found: _$s12DVTDownloads21DownloadableAssetTypeO22downloadableDependencyyAcA0bF4InfoVcACmFWC
+  Referenced from: <DE357EE7-C335-3CCF-9A52-0C79EADEE5B7> /Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/Versions/A/IDESimulatorFoundation
+  Expected in:     <6B404C00-1892-325F-80B8-BE29A99A006A> /Library/Developer/PrivateFrameworks/DVTDownloads.framework/Versions/A/DVTDownloads" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, 0x0109): Symbol not found: _$s12DVTDownloads21DownloadableAssetTypeO22downloadableDependencyyAcA0bF4InfoVcACmFWC
+  Referenced from: <DE357EE7-C335-3CCF-9A52-0C79EADEE5B7> /Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/Versions/A/IDESimulatorFoundation
+  Expected in:     <6B404C00-1892-325F-80B8-BE29A99A006A> /Library/Developer/PrivateFrameworks/DVTDownloads.framework/Versions/A/DVTDownloads, NSBundlePath=/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework, NSLocalizedDescription=The bundle “IDESimulatorFoundation” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, 0x0000): Symbol not found: _$s12DVTDownloads21DownloadableAssetTypeO22downloadableDependencyyAcA0bF4InfoVcACmFWC
+  Referenced from: <DE357EE7-C335-3CCF-9A52-0C79EADEE5B7> /Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/Versions/A/IDESimulatorFoundation
+  Expected in:     <6B404C00-1892-325F-80B8-BE29A99A006A> /Library/Developer/PrivateFrameworks/DVTDownloads.framework/Versions/A/DVTDownloads
+
+A required plugin failed to load. Please ensure system content is up-to-date — try running 'xcodebuild -runFirstLaunch'.
+2026-04-21 09:58:37.270 xcodebuild[31917:457017] [MT] DVTPlugInExtensionFaulting: Failed to fire fault for extension IDESimulatorFoundation/IDESimulatorFoundation.plugindata/plug-in[1]/extension[2]: Error Domain=DVTPlugInErrorDomain Code=2 "Loading a plug-in failed." UserInfo={DVTPlugInIdentifierErrorKey=com.apple.dt.IDESimulatorFoundation, DVTPlugInExecutablePathErrorKey=/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, NSLocalizedRecoverySuggestion=The plug-in or one of its prerequisite plug-ins may be missing or damaged and may need to be reinstalled., DVTPlugInDYLDErrorMessageErrorKey=dlopen(/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, 0x0000): Symbol not found: _$s12DVTDownloads21DownloadableAssetTypeO22downloadableDependencyyAcA0bF4InfoVcACmFWC
+  Referenced from: <DE357EE7-C335-3CCF-9A52-0C79EADEE5B7> /Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/Versions/A/IDESimulatorFoundation
+  Expected in:     <6B404C00-1892-325F-80B8-BE29A99A006A> /Library/Developer/PrivateFrameworks/DVTDownloads.framework/Versions/A/DVTDownloads, NSLocalizedDescription=Loading a plug-in failed., NSFilePath=/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework, NSLocalizedFailureReason=The plug-in “com.apple.dt.IDESimulatorFoundation” at path “/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework” could not be loaded.  The plug-in or one of its prerequisite plug-ins may be missing or damaged., NSUnderlyingError=0xc2ec1d800 {Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, 0x0109): Symbol not found: _$s12DVTDownloads21DownloadableAssetTypeO22downloadableDependencyyAcA0bF4InfoVcACmFWC
+  Referenced from: <DE357EE7-C335-3CCF-9A52-0C79EADEE5B7> /Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/Versions/A/IDESimulatorFoundation
+  Expected in:     <6B404C00-1892-325F-80B8-BE29A99A006A> /Library/Developer/PrivateFrameworks/DVTDownloads.framework/Versions/A/DVTDownloads" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/IDESimulatorFoundation, 0x0109): Symbol not found: _$s12DVTDownloads21DownloadableAssetTypeO22downloadableDependencyyAcA0bF4InfoVcACmFWC
+  Referenced from: <DE357EE7-C335-3CCF-9A52-0C79EADEE5B7> /Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework/Versions/A/IDESimulatorFoundation
+  Expected in:     <6B404C00-1892-325F-80B8-BE29A99A006A> /Library/Developer/PrivateFrameworks/DVTDownloads.framework/Versions/A/DVTDownloads, NSBundlePath=/Applications/Xcode.app/Contents/Frameworks/IDESimulatorFoundation.framework, NSLocalizedDescription=The bundle “IDESimulatorFoundation” couldn’t be loaded.}}}
+
+
+xcodebuild failed to load a required plug-in. Ensure your system frameworks are up-to-date by running 'xcodebuild -runFirstLaunch'
+  Command: /usr/bin/arch -arm64e xcrun xcodebuild -list
+
+```
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:118:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:344:19)
+<asynchronous suspension>
+#2      XcodeProjectInterpreter.getInfo (package:flutter_tools/src/ios/xcodeproj.dart:328:30)
+<asynchronous suspension>
+#3      XcodeBasedProject.projectInfo (package:flutter_tools/src/xcode_project.dart:204:29)
+<asynchronous suspension>
+#4      XcodeBasedProject.buildSettingsForBuildInfo (package:flutter_tools/src/xcode_project.dart:240:36)
+<asynchronous suspension>
+#5      IosProject._parseProductName (package:flutter_tools/src/xcode_project.dart:666:55)
+<asynchronous suspension>
+#6      IosProject.productName (package:flutter_tools/src/xcode_project.dart:654:29)
+<asynchronous suspension>
+#7      BuildableIOSApp.fromProject (package:flutter_tools/src/ios/application_package.dart:118:33)
+<asynchronous suspension>
+#8      FlutterApplicationPackageFactory.getPackageForPlatform (package:flutter_tools/src/flutter_application_package.dart:85:15)
+<asynchronous suspension>
+#9      _BuildIOSSubCommand.buildableIOSApp.<anonymous closure> (package:flutter_tools/src/commands/build_ios.dart:710:9)
+<asynchronous suspension>
+#10     _BuildIOSSubCommand.runCommand (package:flutter_tools/src/commands/build_ios.dart:750:33)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1581:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:497:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:432:5)
+<asynchronous suspension>
+#17     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:98:11)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#19     main (package:flutter_tools/executable.dart:101:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[!] Flutter (Channel [user-branch], 3.35.8-ohos-0.0.3, on macOS 26.2 25C56 darwin-arm64 (Rosetta), locale zh-Hans-CN) [38.8s]
+    ! Flutter version 3.35.8-ohos-0.0.3 on channel [user-branch] at /Users/wujilingtong/custom_flutter_hos
+      Currently on an unknown channel. Run `flutter channel` to switch to an official channel.
+      If that doesn't fix the issue, reinstall Flutter by following instructions at https://flutter.dev/setup.
+    ! Upstream repository https://gitcode.com/openharmony-tpc/flutter_flutter.git is not a standard remote.
+      Set environment variable "FLUTTER_GIT_URL" to https://gitcode.com/openharmony-tpc/flutter_flutter.git to dismiss this error.
+    • Framework revision 65cbbee1fa (5 weeks ago), 2026-03-14 19:06:02 +0800
+    • Engine revision 035316565a
+    • Dart version 3.9.2
+    • DevTools version 2.48.0
+    • Pub download mirror https://pub.flutter-io.cn
+    • Flutter download mirror https://storage.flutter-io.cn
+    • Feature flags: enable-ohos, enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-lldb-debugging
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✓] HarmonyOS toolchain - develop for HarmonyOS devices
+    • OpenHarmony Sdk at /Applications/DevEco-Studio.app/Contents/sdk, available api versions has [23:default]
+    • Ohpm version 6.1.1.830
+    • Node version v25.1.0
+    • Hvigorw binary at /Applications/DevEco-Studio.app/Contents/tools/hvigor/bin/hvigorw
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 37.0.0) [39.9s]
+    • Android SDK at /Users/wujilingtong/Library/Android/sdk
+    • Emulator version unknown
+    • Platform android-37.0, build-tools 37.0.0
+    • ANDROID_HOME = /Users/wujilingtong/Library/Android/sdk
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 21.0.7+-13880790-b1038.58)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 26.4.1) [80.0s]
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 17E202
+    • CocoaPods version 1.16.2
+
+[✓] Chrome - develop for the web [62ms]
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2025.1) [62ms]
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 21.0.7+-13880790-b1038.58)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2024.1.1) [61ms]
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.116.0) [7ms]
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.132.0
+
+[✓] Connected device (5 available) [48.8s]
+    • Redmi Note 8 Pro (mobile)  • mbpjcetsj7soylqs          • android-arm64  • Android 11 (API 30)
+    • 5KTUT25613008892 (mobile)  • 5KTUT25613008892          • ohos-arm64     • Ohos OpenHarmony-6.0.2.130 (API 22)
+    • iPhone (wireless) (mobile) • 00008101-000105201EB9003A • ios            • iOS 18.7.7 22H340
+    • macOS (desktop)            • macos                     • darwin-arm64   • macOS 26.2 25C56 darwin-arm64 (Rosetta)
+    • Chrome (web)               • chrome                    • web-javascript • Google Chrome 147.0.7727.56
+    ! Error: Browsing on the local area network for iPad. Ensure the device is unlocked and attached with a cable or associated with the same local area network as this Mac.
+      The device must be opted into Developer Mode to connect wirelessly. (code -27)
+
+[!] Network resources [96.5s]
+    ✗ An HTTP error occurred while checking "https://github.com/": Connection closed before full header was received
+
+! Doctor found issues in 2 categories.
+```

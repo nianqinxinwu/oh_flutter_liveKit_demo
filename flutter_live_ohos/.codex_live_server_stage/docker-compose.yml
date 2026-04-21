@@ -1,0 +1,38 @@
+services:
+  livekit:
+    image: livekit/livekit-server:v1.11.0
+    container_name: livekit-server-local
+    restart: unless-stopped
+    command:
+      - --config
+      - /etc/livekit/livekit.yaml
+      - --node-ip
+      - ${LIVEKIT_NODE_IP}
+      - --keys
+      - "${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}"
+    environment:
+      NODE_IP: ${LIVEKIT_NODE_IP}
+    ports:
+      - "${LIVEKIT_SIGNAL_PORT}:7880/tcp"
+      - "${LIVEKIT_TCP_PORT}:7881/tcp"
+      - "${LIVEKIT_UDP_START}-${LIVEKIT_UDP_END}:${LIVEKIT_UDP_START}-${LIVEKIT_UDP_END}/udp"
+    volumes:
+      - ./livekit/livekit.yaml:/etc/livekit/livekit.yaml:ro
+
+  token-service:
+    build:
+      context: ./token-service
+    container_name: livekit-token-service
+    restart: unless-stopped
+    depends_on:
+      - livekit
+    environment:
+      PORT: ${TOKEN_SERVICE_PORT}
+      LISTEN_ADDR: 0.0.0.0
+      LIVEKIT_API_URL: ${LIVEKIT_API_URL}
+      PUBLIC_LIVEKIT_URL: ${PUBLIC_LIVEKIT_URL}
+      LIVEKIT_API_KEY: ${LIVEKIT_API_KEY}
+      LIVEKIT_API_SECRET: ${LIVEKIT_API_SECRET}
+      TOKEN_DEFAULT_TTL_SECONDS: ${TOKEN_DEFAULT_TTL_SECONDS}
+    ports:
+      - "${TOKEN_SERVICE_PORT}:${TOKEN_SERVICE_PORT}"

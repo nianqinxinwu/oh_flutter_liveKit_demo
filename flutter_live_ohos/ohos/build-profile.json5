@@ -1,0 +1,54 @@
+
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "./sign/live-test.p12",
+          "storePassword": "00000018212b0532b06b621cc2224c09b8d883a6320b82f4e5973e272719984731ad9e055d1e8a9a",
+          "keyAlias": "flutterliveohos_debug",
+          "keyPassword": "000000185f6a4d76a3f5c740db2b380a9bd1dc9eb8827349660cdf44cfc2711723a147b7e972b4eb",
+          "profile": "./sign/chuanxing_debug_profileDebug.p7b",
+          "certpath": "./sign/chuanxing_debug.cer",
+          "signAlg": "SHA256withECDSA"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.1.0(18)",
+        "targetSdkVersion": "5.1.0(18)",
+        "runtimeOS": "HarmonyOS",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "profile"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@ohos/flutter_ohos": "file:./oh_modules/@ohos/flutter_ohos",
+    "flutter_native_arm64_v8a": "file:./oh_modules/flutter_native_arm64_v8a",
+    "flutter_native_x86_64": "file:./oh_modules/flutter_native_x86_64",
+    "connectivity_plus": "file:./oh_modules/connectivity_plus",
+    "device_info_plus": "file:./oh_modules/device_info_plus",
+    "flutter_webrtc": "file:./oh_modules/flutter_webrtc",
+    "livekit_client": "file:./oh_modules/livekit_client",
+    "path_provider_ohos": "file:./oh_modules/path_provider_ohos"
+  }
+}
